@@ -1,6 +1,7 @@
 "use client";
 
 import { type FormEvent, useMemo, useState } from "react";
+import StockImage from "../../components/StockImage";
 import Card from "../../components/ui/Card";
 import { Button } from "../../components/ui/Button";
 import { HelperText, Label, TextInput } from "../../components/ui/Field";
@@ -62,16 +63,39 @@ export default function TrackRepairPage() {
   }, [result]);
 
   return (
-    <div className="content-shell space-y-10 pb-16 pt-10">
+    <div className="space-y-10 pb-16">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="relative h-[260px] w-full md:h-[320px]">
+            <StockImage
+              src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775212841/IMG_2734_avpvyh.jpg"
+              alt="Drone repair and inspection"
+              priority
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal-10 via-charcoal-10/45 to-white/10" />
+          </div>
+        </div>
+        <div className="relative z-10">
+          <div className="content-shell flex h-[260px] items-end pb-8 md:h-[320px]">
+            <div>
+              <h1 className="text-3xl font-semibold text-white md:text-4xl">
+                Track Drone Repair
+              </h1>
+              <p className="mt-2 max-w-xl text-sm font-medium text-brand-100">
+                Check progress using your reference number or your phone/email.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="content-shell space-y-10">
       <div className="grid gap-6 md:grid-cols-12 md:items-start">
         <div className="md:col-span-7">
-          <h1 className="text-3xl font-semibold text-charcoal-30 md:text-4xl">
-            Track Drone Repair
-          </h1>
-          <p className="mt-3 text-sm font-medium text-charcoal-20">
-            Enter your repair reference number and we’ll show your repair
-            progress. You can also search with a phone number or email.
-          </p>
+          <div className="hidden">
+            {/* Hero heading is shown in banner for a premium layout */}
+          </div>
         </div>
         <div className="md:col-span-5">
           <Card className="p-6">
@@ -245,6 +269,7 @@ export default function TrackRepairPage() {
           </Card>
         </div>
       ) : null}
+      </div>
     </div>
   );
 }

@@ -7,8 +7,8 @@ export default function HomePage() {
       <div className="absolute inset-0">
         <div className="relative h-full w-full">
           <StockImage
-            src="https://images.unsplash.com/photo-1504194104404-433180773017?auto=format&fit=crop&w=1600&q=80"
-            alt="Premium drones in flight over landscape"
+            src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775213112/mountain-peak-view-from-flying-drone-generated-by-ai_kunqsi.jpg"
+            alt="Flying drone view over mountain peak"
             priority
             className="object-cover"
           />
