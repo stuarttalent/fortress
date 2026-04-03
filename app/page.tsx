@@ -41,6 +41,20 @@ export default function HomePage() {
               >
                 Track Repair Status
               </ButtonLink>
+              <a
+                href="https://wa.me/263787230477?text=hi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={[
+                  "inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold transition",
+                  "focus:outline-none focus:ring-2 focus:ring-brand-400/70 focus:ring-offset-2 focus:ring-offset-white",
+                  "shadow-soft",
+                  "border border-white/25 bg-white/10 text-white hover:bg-white/15 hover:border-white/40",
+                  "w-full sm:w-auto"
+                ].join(" ")}
+              >
+                WhatsApp
+              </a>
               <ButtonLink
                 href="/about#contact"
                 variant="ghost"
