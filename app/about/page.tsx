@@ -91,8 +91,8 @@ export default function AboutPage() {
               <div className="relative overflow-hidden rounded-[2.2rem] border border-black/5 bg-white shadow-soft">
                 <div className="relative h-[360px] md:h-[420px]">
                   <StockImage
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80"
-                    alt="Drone technician workspace"
+                    src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775212841/IMG_2734_avpvyh.jpg"
+                    alt="Drone repair and inspection"
                     priority
                     className="animate-floaty"
                   />
