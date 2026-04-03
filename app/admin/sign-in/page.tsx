@@ -1,21 +1,28 @@
 "use client";
 
-import { type FormEvent, useMemo, useState } from "react";
+import { type FormEvent, useEffect, useMemo, useState } from "react";
 import Card from "../../../components/ui/Card";
 import { Button } from "../../../components/ui/Button";
 import { HelperText, Label, TextInput } from "../../../components/ui/Field";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { getAdminSession, setAdminSession } from "../../../lib/adminAuth";
 
 export default function AdminSignInPage() {
+  const router = useRouter();
   const [adminEmail, setAdminEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [signedIn, setSignedIn] = useState(false);
 
   const canSubmit = useMemo(() => {
     return adminEmail.trim().includes("@") && password.trim().length >= 6;
   }, [adminEmail, password]);
+
+  useEffect(() => {
+    const existing = getAdminSession();
+    if (existing) router.replace("/admin/dashboard");
+  }, [router]);
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -34,7 +41,8 @@ export default function AdminSignInPage() {
     // - POST /api/admin/sign-in
     // - Verify credentials and create session/JWT
     if (adminEmail.toLowerCase() === "admin@fotressdrone.com" && password === "Admin123!") {
-      setSignedIn(true);
+      setAdminSession({ email: adminEmail.toLowerCase(), signedInAt: Date.now() });
+      router.push("/admin/dashboard");
     } else {
       setError("Invalid credentials. Use admin@fotressdrone.com / Admin123! for the demo.");
     }
@@ -57,75 +65,51 @@ export default function AdminSignInPage() {
         </div>
 
         <Card className="p-6">
-          {signedIn ? (
-            <div className="space-y-4">
-              <div className="rounded-2xl border border-brand-500/20 bg-brand-50 p-4">
-                <div className="text-sm font-semibold text-brand-600">
-                  Signed in (demo)
-                </div>
-                <div className="mt-1 text-sm font-medium text-charcoal-20">
-                  This page is frontend-only right now. Connect backend
-                  authentication when ready.
-                </div>
+          <form onSubmit={onSubmit} className="grid gap-5">
+            <div className="space-y-2">
+              <Label>Admin email</Label>
+              <TextInput
+                value={adminEmail}
+                onChange={(e) => setAdminEmail(e.target.value)}
+                placeholder="admin@fotressdrone.com"
+                autoComplete="email"
+                required
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label>Password</Label>
+              <TextInput
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter password"
+                type="password"
+                autoComplete="current-password"
+                required
+              />
+              <HelperText>Demo: Admin123!</HelperText>
+            </div>
+
+            {error ? (
+              <div className="rounded-2xl border border-red-500/20 bg-red-50 p-4 text-sm font-semibold text-red-700">
+                {error}
               </div>
-              <div className="flex gap-3">
-                <Button
-                  type="button"
-                  variant="secondary"
-                  className="w-full"
-                  onClick={() => setSignedIn(false)}
+            ) : null}
+
+            <div className="flex flex-col gap-3">
+              <Button type="submit" disabled={loading || !canSubmit}>
+                {loading ? "Signing in..." : "Sign in"}
+              </Button>
+              <div className="text-center">
+                <Link
+                  href="#"
+                  className="text-sm font-semibold text-brand-600 hover:text-brand-700"
                 >
-                  Sign out
-                </Button>
+                  Forgot password?
+                </Link>
               </div>
             </div>
-          ) : (
-            <form onSubmit={onSubmit} className="grid gap-5">
-              <div className="space-y-2">
-                <Label>Admin email</Label>
-                <TextInput
-                  value={adminEmail}
-                  onChange={(e) => setAdminEmail(e.target.value)}
-                  placeholder="admin@fotressdrone.com"
-                  autoComplete="email"
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label>Password</Label>
-                <TextInput
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                />
-                <HelperText>Demo: Admin123!</HelperText>
-              </div>
-
-              {error ? (
-                <div className="rounded-2xl border border-red-500/20 bg-red-50 p-4 text-sm font-semibold text-red-700">
-                  {error}
-                </div>
-              ) : null}
-
-              <div className="flex flex-col gap-3">
-                <Button type="submit" disabled={loading || !canSubmit}>
-                  {loading ? "Signing in..." : "Sign in"}
-                </Button>
-                <div className="text-center">
-                  <Link
-                    href="#"
-                    className="text-sm font-semibold text-brand-600 hover:text-brand-700"
-                  >
-                    Forgot password?
-                  </Link>
-                </div>
-              </div>
-            </form>
-          )}
+          </form>
         </Card>
 
         <div className="text-center text-xs font-semibold text-charcoal-20">

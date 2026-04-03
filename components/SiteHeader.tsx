@@ -10,7 +10,8 @@ const navItems = [
   { label: "About Us", href: "/about" },
   { label: "Log Queries", href: "/log-queries" },
   { label: "Track Repair", href: "/track-repair" },
-  { label: "Admin Sign In", href: "/admin/sign-in" }
+  { label: "Admin Sign In", href: "/admin/sign-in" },
+  { label: "Admin Dashboard", href: "/admin/dashboard" }
 ];
 
 function NavLink({
