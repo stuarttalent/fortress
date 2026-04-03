@@ -51,6 +51,9 @@ export default function AboutPage() {
                 Fotress Drone Solutions
               </h1>
               <p className="mt-4 text-base font-medium text-charcoal-20">
+                <span className="font-semibold text-charcoal-30">
+                  A Division of The iTech Drones Company.
+                </span>{" "}
                 We help customers stay in the air with premium drone sales,
                 meticulous repairs, and technical support you can count on.
                 Whether your drone needs troubleshooting, parts replacement, or

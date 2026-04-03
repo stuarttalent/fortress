@@ -86,13 +86,13 @@ export default function SiteHeader() {
     >
       <div className="content-shell flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <BrandLogo />
+          <BrandLogo size={38} />
           <div className="leading-tight">
             <div className="text-sm font-semibold text-charcoal-30">
               Fotress Drone Solutions
             </div>
             <div className="text-[11px] font-medium text-charcoal-20">
-              Sales • Repair • Technical Support
+              A Division of The iTech Drones Company
             </div>
           </div>
         </Link>

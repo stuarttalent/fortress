@@ -8,13 +8,13 @@ export default function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <BrandLogo />
+              <BrandLogo size={38} />
               <div>
                 <div className="text-sm font-semibold text-charcoal-30">
                   Fotress Drone Solutions
                 </div>
                 <div className="text-xs font-medium text-charcoal-20">
-                  Premium drone sales, repairs, and technical support.
+                  A Division of The iTech Drones Company
                 </div>
               </div>
             </div>
