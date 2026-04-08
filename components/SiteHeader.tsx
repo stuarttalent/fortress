@@ -4,39 +4,46 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import BrandLogo from "./BrandLogo";
+import { cn } from "../lib/cn";
 
-const navItems = [
+const mainNav = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Log Queries", href: "/log-queries" },
+  { label: "Services", href: "/#services" },
+  { label: "Support", href: "/track-repair" },
+  { label: "About", href: "/about" }
+];
+
+const utilityNav = [
+  { label: "Log Query", href: "/log-queries" },
   { label: "Track Repair", href: "/track-repair" },
-  { label: "Admin Sign In", href: "/admin/sign-in" },
-  { label: "Admin Dashboard", href: "/admin/dashboard" }
+  { label: "Admin", href: "/admin/sign-in" },
+  { label: "Dashboard", href: "/admin/dashboard" }
 ];
 
 function NavLink({
   href,
   label,
-  active
+  active,
+  dense = false
 }: {
   href: string;
   label: string;
   active: boolean;
+  dense?: boolean;
 }) {
   return (
     <Link
       href={href}
-      className={[
-        "relative inline-flex items-center px-3 py-2 text-sm font-medium transition",
-        active
-          ? "text-charcoal-30"
-          : "text-charcoal-20 hover:text-charcoal-30"
-      ].join(" ")}
+      className={cn(
+        "relative inline-flex items-center transition",
+        dense ? "px-2.5 py-2 text-[13px] font-semibold" : "px-3 py-3 text-sm font-semibold",
+        active ? "text-ink-900" : "text-ink-600 hover:text-ink-900"
+      )}
       aria-current={active ? "page" : undefined}
     >
       <span>{label}</span>
       {active ? (
-        <span className="absolute inset-x-2 bottom-1 h-[2px] rounded bg-brand-500 shadow-glow" />
+        <span className="absolute inset-x-2 bottom-1 h-[2px] rounded bg-ink-900" />
       ) : null}
     </Link>
   );
@@ -64,7 +71,7 @@ export default function SiteHeader() {
   }, [menuOpen]);
 
   const renderedNav = useMemo(() => {
-    return navItems.map((item) => {
+    return mainNav.map((item) => {
       const active = pathname === item.href;
       return (
         <NavLink
@@ -79,19 +86,42 @@ export default function SiteHeader() {
 
   return (
     <header
-      className={[
-        "sticky top-0 z-50 border-b border-black/5 transition",
-        scrolled ? "bg-white/80 backdrop-blur shadow-soft" : "bg-white/60"
-      ].join(" ")}
+      className={cn(
+        "sticky top-0 z-50 border-b border-ink-100 bg-white transition",
+        scrolled ? "shadow-soft" : ""
+      )}
     >
-      <div className="content-shell flex h-16 items-center justify-between">
+      {/* Utility bar (DJI-like) */}
+      <div className="hidden border-b border-ink-100 bg-white/95 md:block">
+        <div className="content-shell flex h-9 items-center justify-between">
+          <div className="flex items-center gap-4 text-[12px] font-semibold text-ink-600">
+            <a className="hover:text-ink-900" href="mailto:service@fotressdrone.com">
+              service@fotressdrone.com
+            </a>
+            <span className="text-ink-200">|</span>
+            <a className="hover:text-ink-900" href="tel:+15551234567">
+              +1 (555) 123-4567
+            </a>
+          </div>
+          <div className="flex items-center gap-3 text-[12px] font-semibold text-ink-600">
+            {utilityNav.map((item) => (
+              <Link key={item.href} href={item.href} className="hover:text-ink-900">
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Main nav */}
+      <div className="content-shell flex h-14 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <BrandLogo size={38} />
+          <BrandLogo size={34} />
           <div className="leading-tight">
-            <div className="text-sm font-semibold text-charcoal-30">
+            <div className="text-[13px] font-semibold tracking-tight text-ink-900">
               Fotress Drone Solutions
             </div>
-            <div className="text-[11px] font-medium text-charcoal-20">
+            <div className="text-[11px] font-semibold text-ink-600">
               A Division of The iTech Drones Company
             </div>
           </div>
@@ -105,7 +135,7 @@ export default function SiteHeader() {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white px-3 py-2 text-sm font-semibold text-charcoal-30 shadow-soft transition hover:shadow-soft hover:border-brand-500/30"
+            className="inline-flex items-center justify-center rounded-lg border border-ink-200/70 bg-white px-3 py-2 text-sm font-semibold text-ink-900 transition hover:bg-ink-50"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
           >
@@ -115,7 +145,7 @@ export default function SiteHeader() {
               viewBox="0 0 18 18"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="opacity-80"
+              className="opacity-90"
             >
               <path
                 d="M3 5h12M3 9h12M3 13h12"
@@ -136,22 +166,24 @@ export default function SiteHeader() {
           aria-label="Mobile navigation"
         >
           <div className="content-shell pb-4 pt-2">
-            <div className="rounded-2xl border border-black/10 bg-white p-2 shadow-soft">
-              {navItems.map((item) => (
+            <div className="rounded-xl border border-ink-100 bg-white">
+              <div className="px-3 py-3 text-xs font-semibold text-ink-600">
+                Menu
+              </div>
+              <div className="border-t border-ink-100" />
+              {[...mainNav, ...utilityNav].map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className={[
-                    "flex items-center justify-between rounded-xl px-3 py-3 text-sm font-semibold transition",
-                    pathname === item.href
-                      ? "bg-brand-50 text-charcoal-30"
-                      : "text-charcoal-20 hover:bg-black/3 hover:text-charcoal-30"
-                  ].join(" ")}
+                  className={cn(
+                    "flex items-center justify-between px-3 py-3 text-sm font-semibold transition",
+                    pathname === item.href ? "bg-ink-50 text-ink-900" : "text-ink-700 hover:bg-ink-50"
+                  )}
                 >
                   <span>{item.label}</span>
                   {pathname === item.href ? (
-                    <span className="inline-flex h-2 w-2 rounded-full bg-brand-500 shadow-glow" />
+                    <span className="inline-flex h-2 w-2 rounded-full bg-ink-900" />
                   ) : null}
                 </Link>
               ))}

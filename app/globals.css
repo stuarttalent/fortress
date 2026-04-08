@@ -7,7 +7,8 @@ html {
 }
 
 body {
-  @apply bg-white text-charcoal-30 antialiased;
+  @apply bg-white text-ink-900 antialiased;
+  font-family: theme(fontFamily.sans);
 }
 
 .content-shell {
@@ -15,6 +16,11 @@ body {
 }
 
 .glass {
-  @apply bg-white/70 backdrop-blur border border-black/5;
+  @apply bg-white/70 backdrop-blur border border-ink-200/60;
 }
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 

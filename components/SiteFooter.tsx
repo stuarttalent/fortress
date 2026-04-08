@@ -3,118 +3,140 @@ import BrandLogo from "./BrandLogo";
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-black/5 bg-white">
-      <div className="content-shell py-12">
-        <div className="grid gap-8 md:grid-cols-12">
-          <div className="md:col-span-5">
+    <footer className="border-t border-ink-100 bg-white">
+      <div className="content-shell py-14">
+        <div className="grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-4">
             <div className="flex items-center gap-3">
-              <BrandLogo size={38} />
+              <BrandLogo size={36} />
               <div>
-                <div className="text-sm font-semibold text-charcoal-30">
+                <div className="text-[13px] font-semibold tracking-tight text-ink-900">
                   Fotress Drone Solutions
                 </div>
-                <div className="text-xs font-medium text-charcoal-20">
+                <div className="text-xs font-semibold text-ink-600">
                   A Division of The iTech Drones Company
                 </div>
               </div>
             </div>
-            <p className="mt-4 max-w-md text-sm text-charcoal-20">
-              Clean diagnostics. Transparent updates. Quality parts. Fast
-              turnaround with customer-first service.
+            <p className="mt-4 max-w-sm text-sm font-medium text-ink-600">
+              Premium drone sales, repairs, maintenance, and technical support
+              — with transparent milestones and clean diagnostics.
             </p>
           </div>
 
-          <div className="md:col-span-3">
-            <div className="text-sm font-semibold text-charcoal-30">
-              Quick Links
+          <div className="md:col-span-8">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div>
+                <div className="text-sm font-semibold text-ink-900">Services</div>
+                <div className="mt-4 flex flex-col gap-2 text-sm font-medium text-ink-600">
+                  <Link className="hover:text-ink-900" href="/#services">
+                    Drone Sales
+                  </Link>
+                  <Link className="hover:text-ink-900" href="/#services">
+                    Repairs
+                  </Link>
+                  <Link className="hover:text-ink-900" href="/#services">
+                    Maintenance
+                  </Link>
+                  <Link className="hover:text-ink-900" href="/#services">
+                    Diagnostics
+                  </Link>
+                </div>
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-ink-900">Support</div>
+                <div className="mt-4 flex flex-col gap-2 text-sm font-medium text-ink-600">
+                  <Link className="hover:text-ink-900" href="/log-queries">
+                    Service Request
+                  </Link>
+                  <Link className="hover:text-ink-900" href="/track-repair">
+                    Track Repair
+                  </Link>
+                  <Link className="hover:text-ink-900" href="/about#contact">
+                    Contact
+                  </Link>
+                  <a
+                    className="hover:text-ink-900"
+                    href="https://wa.me/263787230477?text=hi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WhatsApp
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-ink-900">Company</div>
+                <div className="mt-4 flex flex-col gap-2 text-sm font-medium text-ink-600">
+                  <Link className="hover:text-ink-900" href="/about">
+                    About Fotress
+                  </Link>
+                  <a className="hover:text-ink-900" href="#">
+                    Privacy
+                  </a>
+                  <a className="hover:text-ink-900" href="#">
+                    Terms
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-ink-900">Admin</div>
+                <div className="mt-4 flex flex-col gap-2 text-sm font-medium text-ink-600">
+                  <Link className="hover:text-ink-900" href="/admin/sign-in">
+                    Sign In
+                  </Link>
+                  <Link className="hover:text-ink-900" href="/admin/dashboard">
+                    Dashboard
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="mt-4 flex flex-col gap-2 text-sm">
-              <Link className="text-charcoal-20 hover:text-charcoal-30" href="/">
-                Home
-              </Link>
-              <Link
-                className="text-charcoal-20 hover:text-charcoal-30"
-                href="/about"
-              >
-                About Us
-              </Link>
-              <Link
-                className="text-charcoal-20 hover:text-charcoal-30"
-                href="/log-queries"
-              >
-                Log Queries
-              </Link>
-              <Link
-                className="text-charcoal-20 hover:text-charcoal-30"
-                href="/track-repair"
-              >
-                Track Repair
-              </Link>
-            </div>
-          </div>
 
-          <div className="md:col-span-4">
-            <div className="text-sm font-semibold text-charcoal-30">
-              Contact
-            </div>
-            <div className="mt-4 space-y-2 text-sm text-charcoal-20">
-              <div>
-                <span className="font-semibold text-charcoal-30">
-                  Phone:
-                </span>{" "}
-                <a className="hover:text-charcoal-30" href="tel:+15551234567">
-                  +1 (555) 123-4567
-                </a>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              <div className="text-sm font-medium text-ink-600">
+                <div className="font-semibold text-ink-900">Contact</div>
+                <div className="mt-2">
+                  <a className="hover:text-ink-900" href="mailto:service@fotressdrone.com">
+                    service@fotressdrone.com
+                  </a>
+                </div>
+                <div className="mt-1">
+                  <a className="hover:text-ink-900" href="tel:+15551234567">
+                    +1 (555) 123-4567
+                  </a>
+                </div>
+                <div className="mt-1">
+                  48 Avionics Park, Suite 12, San Diego, CA 92101
+                </div>
               </div>
-              <div>
-                <span className="font-semibold text-charcoal-30">
-                  Email:
-                </span>{" "}
-                <a
-                  className="hover:text-charcoal-30"
-                  href="mailto:service@fotressdrone.com"
-                >
-                  service@fotressdrone.com
-                </a>
-              </div>
-              <div>
-                <span className="font-semibold text-charcoal-30">
-                  Location:
-                </span>{" "}
-                48 Avionics Park, Suite 12, San Diego, CA 92101
-              </div>
-            </div>
 
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                className="inline-flex items-center rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-semibold text-charcoal-20 transition hover:border-brand-500/30 hover:bg-brand-50 hover:text-charcoal-30"
-                href="#"
-              >
-                Instagram
-              </a>
-              <a
-                className="inline-flex items-center rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-semibold text-charcoal-20 transition hover:border-brand-500/30 hover:bg-brand-50 hover:text-charcoal-30"
-                href="#"
-              >
-                X
-              </a>
-              <a
-                className="inline-flex items-center rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-semibold text-charcoal-20 transition hover:border-brand-500/30 hover:bg-brand-50 hover:text-charcoal-30"
-                href="#"
-              >
-                LinkedIn
-              </a>
+              <div className="text-sm font-medium text-ink-600 md:text-right">
+                <div className="font-semibold text-ink-900">Social</div>
+                <div className="mt-3 flex flex-wrap gap-3 md:justify-end">
+                  <a className="hover:text-ink-900" href="#">
+                    Instagram
+                  </a>
+                  <a className="hover:text-ink-900" href="#">
+                    X
+                  </a>
+                  <a className="hover:text-ink-900" href="#">
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-black/5 pt-6 text-xs text-charcoal-20 md:flex-row md:items-center md:justify-between">
-          <div>© {new Date().getFullYear()} Fotress Drone Solutions. All rights reserved.</div>
+        <div className="mt-12 flex flex-col gap-2 border-t border-ink-100 pt-6 text-xs font-medium text-ink-600 md:flex-row md:items-center md:justify-between">
+          <div>
+            © {new Date().getFullYear()} Fotress Drone Solutions. All rights reserved.
+          </div>
           <div className="flex gap-4">
-            <a className="hover:text-charcoal-30" href="#">
+            <a className="hover:text-ink-900" href="#">
               Privacy
             </a>
-            <a className="hover:text-charcoal-30" href="#">
+            <a className="hover:text-ink-900" href="#">
               Terms
             </a>
           </div>

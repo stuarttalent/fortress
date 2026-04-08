@@ -10,7 +10,7 @@ export default function Card({
   return (
     <div
       className={[
-        "rounded-2xl border border-black/5 bg-white shadow-soft",
+        "rounded-xl border border-ink-100 bg-white",
         className
       ].join(" ")}
     >

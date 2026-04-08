@@ -4,12 +4,37 @@ module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "Apple Color Emoji",
+          "Segoe UI Emoji"
+        ]
+      },
       colors: {
         charcoal: {
           DEFAULT: "#0f1115",
           10: "#1a1d24",
           20: "#252a35",
           30: "#303748"
+        },
+        ink: {
+          50: "#f7f8fa",
+          100: "#eef0f3",
+          200: "#d9dde3",
+          300: "#b9c0cc",
+          400: "#8f99aa",
+          500: "#6b768a",
+          600: "#4a5568",
+          700: "#323a48",
+          800: "#1d2330",
+          900: "#0f1115"
         },
         brand: {
           50: "#eaf4ff",
@@ -22,12 +47,12 @@ module.exports = {
         }
       },
       boxShadow: {
-        soft: "0 10px 30px rgba(17, 24, 39, 0.10)",
-        glow: "0 0 0 1px rgba(30, 134, 255, 0.20), 0 18px 40px rgba(30, 134, 255, 0.12)"
+        soft: "0 1px 2px rgba(15, 17, 21, 0.06)",
+        glow: "0 0 0 1px rgba(30, 134, 255, 0.22)"
       },
       borderRadius: {
-        xl: "1rem",
-        "2xl": "1.25rem"
+        xl: "0.75rem",
+        "2xl": "1rem"
       },
       keyframes: {
         floaty: {
