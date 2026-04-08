@@ -1,72 +1,203 @@
 import StockImage from "../components/StockImage";
 import { ButtonLink } from "../components/ui/Button";
+import SectionHeader from "../components/ui/SectionHeader";
+import Tile from "../components/ui/Tile";
+import Divider from "../components/ui/Divider";
+import ProductCard from "../components/ProductCard";
+import { DUMMY_PRODUCTS } from "../lib/products";
 
 export default function HomePage() {
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="relative h-full w-full">
-          <StockImage
-            src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775213112/mountain-peak-view-from-flying-drone-generated-by-ai_kunqsi.jpg"
-            alt="Flying drone view over mountain peak"
-            priority
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal-10 via-charcoal-10/40 to-white/10" />
+    <div className="pb-16">
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="relative h-[520px] w-full md:h-[640px]">
+            <StockImage
+              src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775213112/mountain-peak-view-from-flying-drone-generated-by-ai_kunqsi.jpg"
+              alt="Flying drone view over mountain peak"
+              priority
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10" />
+          </div>
         </div>
-      </div>
 
-      <div className="relative z-10">
-        <div className="content-shell flex min-h-[calc(100vh-4rem)] items-center">
-          <div className="max-w-xl space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-200">
-              Fotress Drone Solutions
-            </p>
-            <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl">
-              Professional Drone Sales, Repairs, and Support You Can Trust
-            </h1>
-            <p className="max-w-md text-sm font-medium text-brand-100 md:text-base">
-              Minimal, focused, and fast. Log a repair, track status, or speak
-              to a specialist — all from one place.
-            </p>
+        <div className="relative z-10">
+          <div className="content-shell flex h-[520px] items-end pb-12 md:h-[640px]">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/75">
+                Fotress Drone Solutions
+              </p>
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
+                Precision in Flight. Confidence in Every Repair.
+              </h1>
+              <p className="mt-4 max-w-xl text-base font-medium text-white/75 md:text-lg">
+                Premium drone sales, expert repair services, accessories,
+                diagnostics, and reliable after‑sales support — built for
+                clarity and results.
+              </p>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <ButtonLink href="/log-queries" className="w-full sm:w-auto">
-                Log a Repair Query
-              </ButtonLink>
-              <ButtonLink
-                href="/track-repair"
-                variant="secondary"
-                className="w-full sm:w-auto"
-              >
-                Track Repair Status
-              </ButtonLink>
-              <a
-                href="https://wa.me/263787230477?text=hi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={[
-                  "inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold transition",
-                  "focus:outline-none focus:ring-2 focus:ring-brand-400/70 focus:ring-offset-2 focus:ring-offset-white",
-                  "shadow-soft",
-                  "border border-white/25 bg-white/10 text-white hover:bg-white/15 hover:border-white/40",
-                  "w-full sm:w-auto"
-                ].join(" ")}
-              >
-                WhatsApp
-              </a>
-              <ButtonLink
-                href="/about#contact"
-                variant="ghost"
-                className="w-full sm:w-auto border-white/20 text-white hover:border-white/40 hover:bg-white/5"
-              >
-                Contact Us
-              </ButtonLink>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <ButtonLink href="/products" className="w-full sm:w-auto">
+                  Shop Drones
+                </ButtonLink>
+                <ButtonLink href="/repair-services" variant="secondary" className="w-full sm:w-auto">
+                  Book Repair
+                </ButtonLink>
+                <ButtonLink href="/track-repair" variant="ghost" className="w-full sm:w-auto border-white/25 text-white hover:bg-white/10">
+                  Track Repair
+                </ButtonLink>
+                <a
+                  href="https://wa.me/263787230477?text=hi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center rounded-lg border border-white/25 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/15 sm:w-auto"
+                >
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* FEATURED CATEGORIES */}
+      <section id="services" className="content-shell mt-12">
+        <SectionHeader
+          title="Featured categories"
+          subtitle="Shop drones, book repairs, and keep your fleet mission‑ready."
+          right={<div className="text-xs font-semibold text-ink-600">Product-first • Cinematic • Minimal</div>}
+        />
+        <div className="mt-6 grid gap-4 md:grid-cols-12">
+          <Tile
+            className="md:col-span-4"
+            title="Consumer drones"
+            subtitle="Lightweight, capable drones for everyday flying."
+            href="/products?category=Consumer"
+            imageSrc="https://images.unsplash.com/photo-1527979809431-8b3b7c4c5f0d?auto=format&fit=crop&w=1600&q=80"
+            imageAlt="Consumer drone"
+          />
+          <Tile
+            className="md:col-span-4"
+            title="Professional drones"
+            subtitle="Creator-ready imaging and confident performance."
+            href="/products?category=Professional"
+            imageSrc="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?auto=format&fit=crop&w=1600&q=80"
+            imageAlt="Professional drone in flight"
+          />
+          <Tile
+            className="md:col-span-4"
+            title="Drone repairs"
+            subtitle="Diagnosis, parts replacement, calibration, QA."
+            href="/repair-services"
+            imageSrc="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775212841/IMG_2734_avpvyh.jpg"
+            imageAlt="Repair bench"
+          />
+          <Tile
+            className="md:col-span-4"
+            title="Spare parts & accessories"
+            subtitle="Batteries, props, gimbals, cables, and more."
+            href="/products?category=Accessories"
+            imageSrc="https://images.unsplash.com/photo-1580982172471-9377b23f6e23?auto=format&fit=crop&w=1600&q=80"
+            imageAlt="Drone parts"
+          />
+          <Tile
+            className="md:col-span-4"
+            title="Maintenance services"
+            subtitle="Routine servicing built for reliability."
+            href="/repair-services#maintenance"
+            imageSrc="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
+            imageAlt="Technician workspace"
+          />
+          <Tile
+            className="md:col-span-4"
+            title="Enterprise solutions"
+            subtitle="Inspection workflows for demanding operations."
+            href="/products?category=Enterprise"
+            imageSrc="https://images.unsplash.com/photo-1504445969282-7feb20f202b8?auto=format&fit=crop&w=1600&q=80"
+            imageAlt="Enterprise inspection"
+          />
+        </div>
+      </section>
+
+      <Divider className="content-shell my-14" />
+
+      {/* FEATURED PRODUCTS */}
+      <section className="content-shell">
+        <SectionHeader
+          title="Featured products"
+          subtitle="Premium selections for creators, teams, and operators."
+          right={<ButtonLink href="/products" variant="secondary">View all</ButtonLink>}
+        />
+        <div className="mt-6 grid gap-4 md:grid-cols-12">
+          {DUMMY_PRODUCTS.slice(0, 6).map((p) => (
+            <ProductCard key={p.slug} product={p} className="md:col-span-4" />
+          ))}
+        </div>
+      </section>
+
+      <Divider className="content-shell my-14" />
+
+      {/* REPAIR EXPERIENCE */}
+      <section className="content-shell">
+        <SectionHeader
+          title="Repair experience"
+          subtitle="A clean workflow designed for transparent progress."
+        />
+        <div className="mt-6 grid gap-3 rounded-xl border border-ink-100 bg-white p-5 md:grid-cols-7">
+          {[
+            "Log request",
+            "Device inspection",
+            "Diagnosis",
+            "Quotation approval",
+            "Repair in progress",
+            "Testing",
+            "Ready"
+          ].map((s, idx) => (
+            <div key={s} className="flex items-center gap-3">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-ink-50 text-sm font-semibold text-ink-900">
+                {idx + 1}
+              </div>
+              <div className="text-sm font-semibold text-ink-900">{s}</div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <ButtonLink href="/log-queries">Log query</ButtonLink>
+          <ButtonLink href="/track-repair" variant="secondary">
+            Track existing repair
+          </ButtonLink>
+        </div>
+      </section>
+
+      {/* TRACKING CTA BAND */}
+      <section className="content-shell mt-14">
+        <div className="grid gap-6 rounded-xl border border-ink-100 bg-ink-50 p-6 md:grid-cols-12 md:items-center md:p-10">
+          <div className="md:col-span-7">
+            <div className="text-2xl font-semibold tracking-tight text-ink-900">
+              Track repair status in seconds
+            </div>
+            <div className="mt-2 text-sm font-medium text-ink-600">
+              Use your reference number to view milestones, notes, and readiness.
+            </div>
+          </div>
+          <div className="md:col-span-5">
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <div className="w-full rounded-lg border border-ink-200/70 bg-white px-4 py-2.5 text-sm font-semibold text-ink-400">
+                Reference number (e.g., FD-ALPHA-4821)
+              </div>
+              <ButtonLink href="/track-repair" className="w-full sm:w-auto">
+                Track now
+              </ButtonLink>
+            </div>
+            <div className="mt-2 text-xs font-medium text-ink-600">
+              This is a preview field — the tracking portal contains the full search.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 
