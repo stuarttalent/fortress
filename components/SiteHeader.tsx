@@ -8,16 +8,17 @@ import { cn } from "../lib/cn";
 
 const mainNav = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/#services" },
-  { label: "Support", href: "/track-repair" },
+  { label: "Products", href: "/products" },
+  { label: "Repair Services", href: "/repair-services" },
+  { label: "Track Repair", href: "/track-repair" },
   { label: "About", href: "/about" }
 ];
 
 const utilityNav = [
   { label: "Log Query", href: "/log-queries" },
-  { label: "Track Repair", href: "/track-repair" },
-  { label: "Admin", href: "/admin/sign-in" },
-  { label: "Dashboard", href: "/admin/dashboard" }
+  { label: "Support", href: "/support" },
+  { label: "Contact", href: "/contact" },
+  { label: "Admin Sign In", href: "/admin/sign-in" }
 ];
 
 function NavLink({
@@ -95,12 +96,12 @@ export default function SiteHeader() {
       <div className="hidden border-b border-ink-100 bg-white/95 md:block">
         <div className="content-shell flex h-9 items-center justify-between">
           <div className="flex items-center gap-4 text-[12px] font-semibold text-ink-600">
-            <a className="hover:text-ink-900" href="mailto:service@fotressdrone.com">
-              service@fotressdrone.com
+            <a className="hover:text-ink-900" href="mailto:info@itechdrones.com">
+              info@itechdrones.com
             </a>
             <span className="text-ink-200">|</span>
-            <a className="hover:text-ink-900" href="tel:+15551234567">
-              +1 (555) 123-4567
+            <a className="hover:text-ink-900" href="tel:+263787230477">
+              +263 787 230 477
             </a>
           </div>
           <div className="flex items-center gap-3 text-[12px] font-semibold text-ink-600">

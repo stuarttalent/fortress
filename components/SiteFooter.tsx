@@ -52,12 +52,12 @@ export default function SiteFooter() {
                   <Link className="hover:text-ink-900" href="/track-repair">
                     Track Repair
                   </Link>
-                  <Link className="hover:text-ink-900" href="/about#contact">
-                    Contact
+                  <Link className="hover:text-ink-900" href="/support">
+                    Support
                   </Link>
                   <a
                     className="hover:text-ink-900"
-                    href="https://wa.me/263787230477?text=hi"
+                    href="https://wa.me/263710493700?text=hi"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -96,17 +96,17 @@ export default function SiteFooter() {
               <div className="text-sm font-medium text-ink-600">
                 <div className="font-semibold text-ink-900">Contact</div>
                 <div className="mt-2">
-                  <a className="hover:text-ink-900" href="mailto:service@fotressdrone.com">
-                    service@fotressdrone.com
+                  <a className="hover:text-ink-900" href="mailto:info@itechdrones.com">
+                    info@itechdrones.com
                   </a>
                 </div>
                 <div className="mt-1">
-                  <a className="hover:text-ink-900" href="tel:+15551234567">
-                    +1 (555) 123-4567
+                  <a className="hover:text-ink-900" href="tel:+263787230477">
+                    +263 787 230 477
                   </a>
                 </div>
                 <div className="mt-1">
-                  48 Avionics Park, Suite 12, San Diego, CA 92101
+                  Travel Plaza, 29 Mazowe Street and J Chinamano, Harare
                 </div>
               </div>
 

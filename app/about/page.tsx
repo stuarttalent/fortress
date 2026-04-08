@@ -17,28 +17,7 @@ const values = [
   { title: "Customer care", desc: "Support that’s responsive, friendly, and technical." }
 ];
 
-const team = [
-  {
-    name: "Maya Chen",
-    role: "Lead Drone Technician",
-    img: "https://images.unsplash.com/photo-1611930022073-bf3cc9f6e1e7?auto=format&fit=crop&w=1200&q=80"
-  },
-  {
-    name: "Ethan Rivera",
-    role: "Diagnostics Engineer",
-    img: "https://images.unsplash.com/photo-1560264280-88fbb0c6a2e6?auto=format&fit=crop&w=1200&q=80"
-  },
-  {
-    name: "Priya Nair",
-    role: "Repair & Quality Specialist",
-    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80"
-  },
-  {
-    name: "Samir Patel",
-    role: "Parts & Compatibility Advisor",
-    img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1200&q=80"
-  }
-];
+// Team block removed per request.
 
 export default function AboutPage() {
   return (
@@ -235,50 +214,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TEAM */}
-      <section>
-        <div className="content-shell">
-          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-            <div>
-              <h2 className="text-2xl font-semibold text-charcoal-30">
-                Technicians you can rely on
-              </h2>
-              <p className="mt-2 text-sm font-medium text-charcoal-20">
-                Experienced repair experts and diagnostics specialists.
-              </p>
-            </div>
-            <div className="text-xs font-semibold text-charcoal-20">
-              Premium work, every time
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-12">
-            {team.map((m) => (
-              <Card
-                key={m.name}
-                className="md:col-span-3 overflow-hidden p-0 transition hover:-translate-y-0.5 hover:shadow-glow"
-              >
-                <div className="relative h-44 bg-black/5">
-                  <StockImage
-                    src={m.img}
-                    alt={`${m.name} portrait`}
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <div className="text-base font-semibold text-charcoal-30">
-                    {m.name}
-                  </div>
-                  <div className="mt-1 text-xs font-medium text-charcoal-20">
-                    {m.role}
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA + CONTACT */}
       <section id="contact" className="relative">
         <div className="content-shell">
@@ -308,11 +243,17 @@ export default function AboutPage() {
                   <div className="mt-3 space-y-2 text-sm text-charcoal-20">
                     <div>
                       <span className="font-semibold text-charcoal-30">Phone:</span>{" "}
-                      +1 (555) 123-4567
+                      +263 787 230 477
                     </div>
                     <div>
                       <span className="font-semibold text-charcoal-30">Email:</span>{" "}
-                      service@fotressdrone.com
+                      info@itechdrones.com
+                    </div>
+                    <div>
+                      <span className="font-semibold text-charcoal-30">
+                        WhatsApp:
+                      </span>{" "}
+                      +263 710 493 700
                     </div>
                     <div>
                       <span className="font-semibold text-charcoal-30">
@@ -324,7 +265,7 @@ export default function AboutPage() {
                       <span className="font-semibold text-charcoal-30">
                         Location:
                       </span>{" "}
-                      48 Avionics Park, Suite 12, San Diego, CA 92101
+                      Travel Plaza, 29 Mazowe Street and J Chinamano, Harare
                     </div>
                   </div>
                   <p className="mt-4 text-xs font-medium text-charcoal-20">
