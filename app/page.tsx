@@ -14,47 +14,61 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <div className="relative h-[520px] w-full md:h-[640px]">
             <StockImage
-              src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775213112/mountain-peak-view-from-flying-drone-generated-by-ai_kunqsi.jpg"
-              alt="Flying drone view over mountain peak"
+              src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775665360/Gemini_Generated_Image_lovr5olovr5olovr_y0pca6.png"
+              alt="Fotress Drone Solutions hero wallpaper"
               priority
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+            <div className="absolute inset-0 bg-black/10" />
           </div>
         </div>
 
         <div className="relative z-10">
-          <div className="content-shell flex h-[520px] items-end pb-12 md:h-[640px]">
-            <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/75">
+          <div className="content-shell flex h-[520px] items-center md:h-[640px]">
+            <div className="mx-auto w-full max-w-2xl text-center">
+              <div className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-white/80 backdrop-blur">
                 Fotress Drone Solutions
-              </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
+              </div>
+              <h1 className="mx-auto mt-5 max-w-xl text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
                 Precision in Flight. Confidence in Every Repair.
               </h1>
-              <p className="mt-4 max-w-xl text-base font-medium text-white/75 md:text-lg">
-                Premium drone sales, expert repair services, accessories,
-                diagnostics, and reliable after‑sales support — built for
-                clarity and results.
+              <p className="mx-auto mt-4 max-w-xl text-sm font-medium leading-relaxed text-white/75 md:text-base">
+                Premium drone sales, expert repairs, accessories, diagnostics,
+                and reliable after‑sales support — built for clarity and results.
               </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href="/products" className="w-full sm:w-auto">
+              <div className="mx-auto mt-7 flex max-w-xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+                <ButtonLink
+                  href="/products"
+                  className="w-full sm:w-auto bg-white text-ink-900 hover:bg-white/90"
+                >
                   Shop Drones
                 </ButtonLink>
-                <ButtonLink href="/repair-services" variant="secondary" className="w-full sm:w-auto">
+                <ButtonLink
+                  href="/repair-services"
+                  variant="secondary"
+                  className="w-full sm:w-auto border-white/25 bg-white/10 text-white hover:bg-white/15"
+                >
                   Book Repair
                 </ButtonLink>
-                <ButtonLink href="/track-repair" variant="ghost" className="w-full sm:w-auto border-white/25 text-white hover:bg-white/10">
+                <ButtonLink
+                  href="/track-repair"
+                  variant="ghost"
+                  className="w-full sm:w-auto border border-white/20 bg-transparent text-white hover:bg-white/10"
+                >
                   Track Repair
                 </ButtonLink>
+              </div>
+
+              <div className="mt-5">
                 <a
                   href="https://wa.me/263710493700?text=hi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center rounded-lg border border-white/25 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/15 sm:w-auto"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-white/85 backdrop-blur transition hover:bg-white/15"
                 >
-                  WhatsApp
+                  WhatsApp: +263 710 493 700
                 </a>
               </div>
             </div>
