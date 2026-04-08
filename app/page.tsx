@@ -49,7 +49,7 @@ export default function HomePage() {
                   Track Repair
                 </ButtonLink>
                 <a
-                  href="https://wa.me/263787230477?text=hi"
+                  href="https://wa.me/263710493700?text=hi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex w-full items-center justify-center rounded-lg border border-white/25 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/15 sm:w-auto"
