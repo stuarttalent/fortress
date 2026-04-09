@@ -33,7 +33,7 @@ export const DUMMY_PRODUCTS: Product[] = [
     category: "Consumer",
     startingPrice: "$499",
     imageSrc:
-      "https://images.unsplash.com/photo-1527979809431-8b3b7c4c5f0d?auto=format&fit=crop&w=1600&q=80",
+      "https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703804/0c4fe6f0b2b557871270255819330cd0_cxanol.png,
     imageAlt: "Compact consumer drone on a clean background",
     highlights: ["Lightweight design", "Stabilized video", "Quick setup"],
     specs: [
@@ -49,7 +49,7 @@ export const DUMMY_PRODUCTS: Product[] = [
     category: "Professional",
     startingPrice: "$999",
     imageSrc:
-      "https://images.unsplash.com/photo-1508615070457-7baeba4003ab?auto=format&fit=crop&w=1600&q=80",
+      "https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703804/80d4349a909e93993916eb02371d408e_hlu7dw.jpg",
     imageAlt: "Mid-size drone flying outdoors",
     highlights: ["Obstacle sensing", "Fast tracking", "Crisp HDR"],
     specs: [
@@ -65,7 +65,7 @@ export const DUMMY_PRODUCTS: Product[] = [
     category: "Professional",
     startingPrice: "$1,999",
     imageSrc:
-      "https://images.unsplash.com/photo-1524143986875-3b098d78b363?auto=format&fit=crop&w=1600&q=80",
+      "https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703804/xgxgktgMdJsDg9V9JeB88o_lnamfs.jpg",
     imageAlt: "Premium camera drone in flight",
     highlights: ["Pro camera system", "Stable in wind", "Advanced tracking"],
     specs: [
@@ -81,7 +81,7 @@ export const DUMMY_PRODUCTS: Product[] = [
     category: "Consumer",
     startingPrice: "$1,299",
     imageSrc:
-      "https://images.unsplash.com/photo-1520975867597-0f358a94a1d8?auto=format&fit=crop&w=1600&q=80",
+      "https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703805/FPV-Drones-1_glqj7p.png",
     imageAlt: "FPV style drone with dramatic lighting",
     highlights: ["Agile control", "Cinematic motion", "Stabilized footage"],
     specs: [
@@ -97,7 +97,7 @@ export const DUMMY_PRODUCTS: Product[] = [
     category: "Agriculture",
     startingPrice: "Request quote",
     imageSrc:
-      "https://images.unsplash.com/photo-1620912189869-2a0ae2bfc5ce?auto=format&fit=crop&w=1600&q=80",
+      "https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703803/content_MG-1S_b_gqrxtf.jpg",
     imageAlt: "Agriculture drone over farmland",
     highlights: ["High efficiency", "Smart planning", "Reliable payload"],
     specs: [
@@ -113,7 +113,7 @@ export const DUMMY_PRODUCTS: Product[] = [
     category: "Enterprise",
     startingPrice: "Request quote",
     imageSrc:
-      "https://images.unsplash.com/photo-1504445969282-7feb20f202b8?auto=format&fit=crop&w=1600&q=80",
+      "https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703804/header_DJI_Mavic_3_Enterprise_Series_-_New_Portable_Commercial_Drones_jztnzf.webp",
     imageAlt: "Enterprise drone inspection scenario",
     highlights: ["Inspection workflows", "Data-ready", "Fleet reliability"],
     specs: [
