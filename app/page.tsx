@@ -88,7 +88,7 @@ export default function HomePage() {
             title="Consumer drones"
             subtitle="Lightweight, capable drones for everyday flying."
             href="/products?category=Consumer"
-            imageSrc="https://images.unsplash.com/photo-1527979809431-8b3b7c4c5f0d?auto=format&fit=crop&w=1600&q=80"
+            imageSrc="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703384/04sMm2Af1sBbXjyjewFpK5i-1_so3z0l.webp"
             imageAlt="Consumer drone"
           />
           <Tile
@@ -96,7 +96,7 @@ export default function HomePage() {
             title="Professional drones"
             subtitle="Creator-ready imaging and confident performance."
             href="/products?category=Professional"
-            imageSrc="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?auto=format&fit=crop&w=1600&q=80"
+            imageSrc="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703384/the-best-drone-parts-aerial-photography.jpg_zupmy9.webp"
             imageAlt="Professional drone in flight"
           />
           <Tile
@@ -112,7 +112,7 @@ export default function HomePage() {
             title="Spare parts & accessories"
             subtitle="Batteries, props, gimbals, cables, and more."
             href="/products?category=Accessories"
-            imageSrc="https://images.unsplash.com/photo-1580982172471-9377b23f6e23?auto=format&fit=crop&w=1600&q=80"
+            imageSrc="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703384/s-l1200_cxwm1f.jpg"
             imageAlt="Drone parts"
           />
           <Tile
@@ -128,7 +128,7 @@ export default function HomePage() {
             title="Enterprise solutions"
             subtitle="Inspection workflows for demanding operations."
             href="/products?category=Enterprise"
-            imageSrc="https://images.unsplash.com/photo-1504445969282-7feb20f202b8?auto=format&fit=crop&w=1600&q=80"
+            imageSrc="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703383/header_DJI_Mavic_3_Enterprise_Series_-_New_Portable_Commercial_Drones_u60vl0.webp"
             imageAlt="Enterprise inspection"
           />
         </div>
