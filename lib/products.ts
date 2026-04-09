@@ -33,7 +33,7 @@ export const DUMMY_PRODUCTS: Product[] = [
     category: "Consumer",
     startingPrice: "$499",
     imageSrc:
-      "https://res.cloudinary.com/dugcmzmw4/image/upload/v1775703804/0c4fe6f0b2b557871270255819330cd0_cxanol.png,
+      "https://res.cloudinary.com/dugcmzmw4/image/upload/v1775704223/DJI-Mini-2-SE_hzk7we.jpg",
     imageAlt: "Compact consumer drone on a clean background",
     highlights: ["Lightweight design", "Stabilized video", "Quick setup"],
     specs: [
