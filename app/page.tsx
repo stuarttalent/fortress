@@ -25,7 +25,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10">
-          <div className="content-shell flex h-[520px] items-center md:h-[640px]">
+          <div className="content-shell flex h-[768px] items-center md:h-[1365px]">
             <div className="mx-auto w-full max-w-2xl text-center">
               <div className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-white/80 backdrop-blur">
                 Fotress Drone Solutions
