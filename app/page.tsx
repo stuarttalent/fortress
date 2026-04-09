@@ -37,7 +37,7 @@ export default function HomePage() {
                 .
               </p>
 
-              <div className="mx-auto mt-7 flex max-w-xl flex-col items-stretch justify-bottom gap-3 sm:flex-row sm:items-center">
+              <div className="mx-auto mt-7 flex max-w-xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-bottom">
                 <ButtonLink
                   href="/products"
                   className="w-full sm:w-auto bg-white text-ink-900 hover:bg-white/90"
