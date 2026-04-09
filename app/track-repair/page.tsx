@@ -107,7 +107,7 @@ export default function TrackRepairPage() {
               your drone model and serial number.
             </p>
             <div className="mt-4 text-xs font-semibold text-charcoal-20">
-              Phone: +1 (555) 123-4567 • Email: service@fotressdrone.com
+              Phone: +263 710 493700 • Email: info@itechdrones.com
             </div>
           </Card>
         </div>
