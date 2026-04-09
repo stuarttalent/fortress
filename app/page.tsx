@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="relative h-[520px] w-full md:h-[640px]">
+          <div className="relative h-[768px] w-full md:h-[1365px]">
             <StockImage
               src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775665360/Gemini_Generated_Image_lovr5olovr5olovr_y0pca6.png"
               alt="Fotress Drone Solutions hero wallpaper"
@@ -34,8 +34,7 @@ export default function HomePage() {
                 Precision in Flight. Confidence in Every Repair.
               </h1>
               <p className="mx-auto mt-4 max-w-xl text-sm font-medium leading-relaxed text-white/75 md:text-base">
-                Premium drone sales, expert repairs, accessories, diagnostics,
-                and reliable after‑sales support — built for clarity and results.
+                .
               </p>
 
               <div className="mx-auto mt-7 flex max-w-xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
@@ -68,7 +67,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-white/85 backdrop-blur transition hover:bg-white/15"
                 >
-                  WhatsApp: +263 710 493 700
+                  WhatsApp
                 </a>
               </div>
             </div>
