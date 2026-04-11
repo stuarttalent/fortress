@@ -104,7 +104,7 @@ export default function HomePage() {
             title="Drone repairs"
             subtitle="Diagnosis, parts replacement, calibration, QA."
             href="/repair-services"
-            imageSrc="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775212841/IMG_2734_avpvyh.jpg"
+            imageSrc="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775879302/REPAIRSERVICE.jpg_ki8il4.webp"
             imageAlt="Repair bench"
           />
           <Tile
