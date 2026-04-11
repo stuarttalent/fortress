@@ -68,7 +68,7 @@ export default function TrackRepairPage() {
         <div className="absolute inset-0">
           <div className="relative h-[260px] w-full md:h-[320px]">
             <StockImage
-              src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775212841/IMG_2734_avpvyh.jpg"
+              src="https://res.cloudinary.com/dugcmzmw4/image/upload/v1775879302/REPAIRSERVICE.jpg_ki8il4.webp"
               alt="Drone repair and inspection"
               priority
               className="object-cover"
