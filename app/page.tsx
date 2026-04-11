@@ -28,7 +28,7 @@ export default function HomePage() {
           <div className="content-shell flex h-[1365px] items-center md:h-[768px]">
             <div className="mx-auto w-full max-w-2xl text-center">
               <div className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-white/80 backdrop-blur">
-                iTech Drones and Zimbabwe Drone World
+                iTech Drones and Zim Drones
               </div>
               <h1 className="mx-auto mt-5 max-w-xl text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
                 Precision in Flight. Confidence in Every Repair.
